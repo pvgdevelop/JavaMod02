@@ -9,8 +9,6 @@ public class BinarySearch {
 	public static int binarySearch2(int[] arr, int from, int to, int key) {
 		int mid;
 
-		arr = arr.clone();
-
 		while (from <= to) {
 			mid = (to + from) / 2;
 

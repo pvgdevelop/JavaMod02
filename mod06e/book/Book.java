@@ -1,14 +1,15 @@
 package by.practice.mod06e.book;
 
-
 //id, название, автора(ы), издательство, год издания
 //количество страниц, цена, тип переплета.
 
 //id,title,author,price,format,publisher,pubdate,pages,isbn13
 public class Book {
-	private static int idCount = 0; // keep track of current id count
-	
-	private final int id;
+	// Keep track of current id count
+	private static int idCount = 0;
+
+	// ID will be unique
+	private final int id; 
 	private String title;
 	private String author;
 	private String publisher;
@@ -17,7 +18,7 @@ public class Book {
 	private double price;
 	private String cover;
 	private String isbn;
-	
+
 	{
 		idCount++;
 	}
@@ -42,11 +43,8 @@ public class Book {
 		this.cover = cover;
 	}
 
-//	0    1     2      3     4      5        6       7      8
-//	id,title,author,isbn13,price,format,publisher,pubdate,pages
-
-	public Book(String title, String author, String publisher, int yearPublished, int pages, double price,
-			String cover, String isbn) {
+	public Book(String title, String author, String publisher, int yearPublished, int pages, double price, String cover,
+			String isbn) {
 		this.id = idCount;
 		this.title = title;
 		this.author = author;
@@ -61,7 +59,7 @@ public class Book {
 	public int getId() {
 		return id;
 	}
-	
+
 	public String getTitle() {
 		return title;
 	}
@@ -117,7 +115,7 @@ public class Book {
 	public void setCover(String cover) {
 		this.cover = cover;
 	}
-	
+
 	public String getIsbn() {
 		return isbn;
 	}
@@ -195,5 +193,5 @@ public class Book {
 				"Book {id=%s, title=%s, author=%s, publisher=%s, yearPublished=%s, pages=%s, price=%s, cover=%s, isbn=%s}",
 				id, title, author, publisher, yearPublished, pages, price, cover, isbn);
 	}
-	
+
 }
